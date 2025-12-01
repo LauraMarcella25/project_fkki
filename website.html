@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beasiswa FKKI</title>
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700&family=playfair-display:600" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fkki-sage': '#10403B',
+                        'fkki-mint': '#C7E8CA',
+                        'fkki-gold': '#F6C177',
+                        'fkki-sand': '#F6F4EB'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    boxShadow: {
+                        glow: '0 15px 45px rgba(16, 64, 59, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(180deg, #f6f4eb 0%, #ffffff 35%, #dff2e1 70%, #fbe2c8 100%);
+            min-height: 100vh;
+        }
+
+        .pattern-bg {
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(246, 193, 119, 0.15), transparent 35%),
+                radial-gradient(circle at 90% 0%, rgba(16, 64, 59, 0.1), transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(199, 232, 202, 0.25), transparent 45%);
+        }
+
+        .hero-slider {
+            position: relative;
+            min-height: 420px;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            position: relative;
+        }
+
+        .multi-color-bg {
+            background-color: #fefefe;
+            background-image:
+                linear-gradient(135deg, rgba(16, 64, 59, 0.08), transparent),
+                linear-gradient(45deg, rgba(246, 193, 119, 0.2), transparent),
+                radial-gradient(circle at 20% 20%, rgba(199, 232, 202, 0.35), transparent 45%),
+                radial-gradient(circle at 80% 30%, rgba(16, 64, 59, 0.2), transparent 55%);
+        }
+
+        .contact-gradient {
+            background: linear-gradient(135deg, rgba(16, 64, 59, 0.12), rgba(246, 193, 119, 0.35));
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900">
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-full bg-fkki-sage flex items-center justify-center overflow-hidden">
+    <img src="/Users/lauramarcella2503/Documents/project_fkki/image/logo.jpeg" alt="Logo FKKI" class="w-full h-full object-cover">
+</div>
+
+
+                <div>
+                    <p class="text-xs uppercase tracking-[0.2em] text-fkki-sage">Program</p>
+                    <p class="text-lg font-semibold">Beasiswa FKKI</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#penjelasan" class="hover:text-fkki-sage transition">Penjelasan</a>
+                <a href="#visi-misi" class="hover:text-fkki-sage transition">Visi Misi</a>
+                <a href="#keberlanjutan" class="hover:text-fkki-sage transition">Keberlanjutan</a>
+                <a href="#tata-kelola" class="hover:text-fkki-sage transition">Tata Kelola</a>
+                <a href="#karir" class="hover:text-fkki-sage transition">Karir</a>
+                <a href="#kontak" class="hover:text-fkki-sage transition">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="pt-24">
+        <section class="pattern-bg multi-color-bg">
+            <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-[1.1fr,0.9fr] gap-12 items-center">
+                <div>
+                    <p class="uppercase text-xs font-semibold tracking-[0.4em] text-fkki-sage mb-6">BEASISWA FKKI</p>
+                    <h1 class="text-4xl md:text-5xl font-serif text-fkki-sage leading-tight mb-6">
+                        Berkomitmen untuk membentuk generasi muda berkarakter, berintegritas, dan berlandaskan iman Kristen
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Program Beasiswa FKKI menghadirkan dukungan finansial, mentoring, dan pendidikan untuk mencetak generasi muda yang kompeten dan berdampak. Kami percaya masa depan cerah dimulai dari akses pendidikan yang baik.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#penjelasan" class="px-6 py-3 rounded-full bg-fkki-sage text-white font-semibold hover:bg-fkki-gold hover:text-fkki-sage transition">Pelajari Program</a>
+                        <a href="#karir" class="px-6 py-3 rounded-full border border-fkki-sage text-fkki-sage font-semibold hover:bg-fkki-sage hover:text-white transition">Lihat Alumni</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-fkki-mint to-fkki-gold rounded-3xl blur-3xl opacity-60"></div>
+                    <div class="relative overflow-hidden rounded-3xl shadow-glow hero-slider">
+                        <figure class="hero-slide active">
+                            <img src="image/image1.jpeg" alt="Dokumentasi Beasiswa FKKI" class="w-full h-[420px] object-cover">
+                        </figure>
+                        <figure class="hero-slide">
+                            <img src="image/image2.jpeg" alt="Mentoring Beasiswa FKKI" class="w-full h-[420px] object-cover">
+                        </figure>
+                        <figure class="hero-slide">
+                            <img src="image/image3.jpeg" alt="Alumni Beasiswa FKKI" class="w-full h-[420px] object-cover">
+                        </figure>
+                        <figure class="hero-slide">
+                            <img src="image/image4.jpeg" alt="Kegiatan Komunitas Beasiswa FKKI" class="w-full h-[420px] object-cover">
+                        </figure>
+                        <figure class="hero-slide">
+                            <img src="image/image5.jpeg" alt="Workshop Beasiswa FKKI" class="w-full h-[420px] object-cover">
+                        </figure>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+        <section id="penjelasan" class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <p class="text-sm uppercase tracking-[0.3em] text-fkki-sage mb-3">Tentang Kami</p>
+                <h2 class="text-3xl font-serif text-gray-900 mb-6">Penjelasan Program Beasiswa FKKI</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                 Forum Komunikasi Kristen Kawasan Indonesia Timur (FKKI) adalah sebuah lembaga pelayanan pendidikan dan pembinaan yang berdiri sejak tahun 2006 dengan fokus membantu generasi muda dari Kawasan Indonesia Timur melalui beasiswa jenjang SMA hingga perguruan tinggi. FKKI memiliki satu cabang utama dan bergerak dalam bidang pendidikan, pembinaan karakter, serta pengembangan rohani. Selama lebih dari belasan tahun pelayanan, FKKI telah menjalin kerja sama strategis dengan SMA Petra 4 Sidoarjo, Universitas Kristen Petra, serta berbagai Universitas mitra lainnya di Surabaya.
+                <div class="mt-12 grid md:grid-cols-3 gap-6">
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+                        <p class="text-sm font-semibold text-fkki-sage uppercase tracking-[0.2em] mb-4">01</p>
+                        <h3 class="text-xl font-semibold mb-3">Dukungan Biaya Pendidikan</h3>
+                        <p class="text-gray-600">Program beasiswa FKKI menanggung kebutuhan biaya sekolah peserta sehingga mereka dapat menempuh pendidikan SMA tanpa kendala finansial.</p>
+                    </div>
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+                        <p class="text-sm font-semibold text-fkki-sage uppercase tracking-[0.2em] mb-4">02</p>
+                        <h3 class="text-xl font-semibold mb-3">Pembinaan dan Fasilitas Asrama Selama Tiga Tahun</h3>
+                        <p class="text-gray-600">Peserta beasiswa mendapatkan pembinaan karakter serta tempat tinggal di asrama selama tiga tahun masa SMA untuk membentuk kedisiplinan, kemandirian, dan pola hidup yang sehat.</p>
+                    </div>
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+                        <p class="text-sm font-semibold text-fkki-sage uppercase tracking-[0.2em] mb-4">03</p>
+                        <h3 class="text-xl font-semibold mb-3">Pembinaan Kerohanian di GRII Sidoarjo</h3>
+                        <p class="text-gray-600">Peserta dibimbing dalam pertumbuhan rohani melalui keterlibatan aktif dalam kegiatan Gereja Reformed Injili Indonesia (GRII) Sidoarjo agar berkembang secara iman dan karakter Kristen.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section id="visi-misi" class="py-24 bg-fkki-sage">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-white mb-3">Visi</p>
+                    <h2 class="text-3xl font-serif text-white mb-5">
+                         Mencerdaskan kehidupan bangsa melalui pendidikan berkualitas dan pembinaan holistik yang membentuk generasi berkarakter, beriman, dan berdampak bagi masyarakat.
+                    </h2>
+                </div>
+                <div class="bg-white rounded-3xl shadow-glow p-8 space-y-6">
+                    <p class="text-sm uppercase tracking-[0.3em] text-fkki-sage">Misi</p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><span class="font-semibold text-fkki-sage">01.</span> FKKI menyediakan pendidikan berkualitas untuk membangun kemampuan akademik dan keterampilan hidup peserta didik.</li>
+                        <li><span class="font-semibold text-fkki-sage">02.</span> FKKI menyelenggarakan pembinaan holistik yang menumbuhkan karakter, kedisiplinan, integritas, dan kepedulian sosial.</li>
+                        <li><span class="font-semibold text-fkki-sage">03.</span> FKKI menciptakan lingkungan belajar yang kondusif dengan fasilitas memadai, pendampingan berkelanjutan, dan budaya belajar yang positif.</li>
+                        <li><span class="font-semibold text-fkki-sage">04.</span> FKKI mendorong peserta didik terlibat dalam kegiatan pelayanan dan sosial agar menjadi generasi yang berdampak bagi masyarakat.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="keberlanjutan" class="py-24 bg-fkki-sand">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-fkki-sage mb-4">Keberlanjutan</p>
+                    <h2 class="text-3xl font-serif text-gray-900 mb-6">Menjadi Program Transformasi Jangka Panjang</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        FKKI memiliki komitmen jangka panjang untuk memastikan keberlanjutan program beasiswa dan pembinaan yang telah berjalan sejak tahun 2006. Keberlanjutan ini bukan hanya sekadar mempertahankan kegiatan yang sudah ada, tetapi juga memperluas jangkauan pelayanan agar semakin banyak generasi muda dari Kawasan Indonesia Timur yang dapat mengakses pendidikan berkualitas. Ke depan, FKKI menargetkan pengembangan kemitraan dengan lebih banyak sekolah dan universitas, tidak hanya dengan SMA Petra 4 Sidoarjo dan Universitas Kristen Petra, tetapi juga lembaga pendidikan lain di Surabaya maupun kota besar lainnya.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl shadow-glow p-10 space-y-8">
+                    <div>
+                        <p class="text-3xl font-serif text-fkki-sage">Upaya Pengembangan dan Peningkatan Mutu Program FKKI</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-fkki-sage text-white flex items-center justify-center font-semibold">1</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Perluasan Kemitraan Akademik</p>
+                                <p class="text-sm text-gray-600">FKKI menjalin kolaborasi akademik untuk meningkatkan mutu pendidikan dan peluang pengembangan peserta didik.</p>
+                </div>
+                </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-fkki-gold text-fkki-sage flex items-center justify-center font-semibold">2</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Peningkatan Pembinaan Asrama dan Kerohanian</p>
+                                <p class="text-sm text-gray-600">FKKI memperkuat pembinaan asrama dan rohani untuk membentuk peserta didik yang disiplin, berkarakter, dan bertumbuh dalam iman.</p>
+                </div>
+            </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-fkki-mint text-fkki-sage flex items-center justify-center font-semibold">3</div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Lingkungan Belajar Modern Berbasis Nilai Kristen</p>
+                                <p class="text-sm text-gray-600">FKKI menghadirkan lingkungan belajar modern dan disiplin berlandaskan nilai Kristen untuk menghasilkan lulusan unggul akademik dan matang secara karakter serta spiritual.</p>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="tata-kelola" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-sm uppercase tracking-[0.3em] text-fkki-sage mb-3">Tata Kelola Perusahaan</p>
+                    <h2 class="text-3xl font-serif text-gray-900">Struktur dan Kebijakan Transparan</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+                        FKKI memiliki struktur organisasi yang tertata untuk memastikan seluruh program berjalan dengan baik dan akuntabel. Di tingkat pusat, FKKI dipimpin oleh pengurus inti yang terdiri dari koordinator umum, koordinator pembinaan, koordinator asrama, serta tim administrasi dan kemitraan.
+                </div>
+                    <div class="p-8 border border-fkki-mint rounded-3xl shadow-sm">
+                        <p class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-4">Kebijakan</p>
+                        <h3 class="text-2xl font-semibold mb-4">Kebijakan Utama</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li><span class="font-semibold text-fkki-sage">Pembinaan Kedisiplinan, Kemandirian, dan Karakter</span> – FKKI menerapkan pembinaan di asrama yang menekankan kedisiplinan, kemandirian, karakter, serta tanggung jawab pribadi.</li>
+                            <li><span class="font-semibold text-fkki-sage">Kewajiban Mengikuti Aturan dan Kegiatan Asrama</span> – Setiap siswa wajib menaati peraturan asrama, mengikuti pembinaan mandiri, dan menjalani kegiatan rutin yang membentuk etika dan perilaku yang baik.</li>
+                            <li><span class="font-semibold text-fkki-sage">Pembinaan Rohani Secara Teratur di GRII Sidoarjo</span> – Siswa mengikuti kegiatan gereja dan pembinaan rohani secara konsisten di Gereja Reformed Injili Indonesia (GRII) Sidoarjo untuk mendukung pertumbuhan iman dan spiritual.</li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="karir" class="py-24 bg-fkki-sage text-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+                    <div>
+                        <h2 class="text-3xl font-serif">Penggerak Utama dalam Pengembangan FKKI</h2>
+                        <p class="text-fkki-mint mt-4 max-w-2xl">Dedikasinya menunjukkan bahwa komitmen dan keteguhan hati dapat melahirkan transformasi bagi banyak generasi.</p>
+                </div>
+                    <a href="#kontak"></a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white/5 rounded-3xl p-8 backdrop-blur text-center flex flex-col items-center">
+                        <img src="/Users/lauramarcella2503/Documents/project_fkki/image/foto1.jpeg" alt="foto 1" class="w-32 h-32 rounded-3xl object-cover mb-5 shadow-lg">
+                        <h3 class="text-xl font-semibold">Pdt. Tumpal Hutahaean</h3>
+                        <p class="text-fkki-mint text-sm mb-4">Pengurus Rohani GRII Sidoarjo</p>
+                        <p class="text-sm text-white/80 mb-6">Beliau membina kerohanian para siswa melalui GRII Sidoarjo melalui pengajaran, pendampingan, dan pembinaan karakter Kristen. Di bawah kepemimpinannya, pembinaan rohani FKKI berlangsung terarah dan konsisten, menjadi fondasi penting bagi pertumbuhan karakter peserta.</p>
+                    </article>
+                    <article class="bg-white/5 rounded-3xl p-8 backdrop-blur text-center flex flex-col items-center">
+                        <img src="/Users/lauramarcella2503/Documents/project_fkki/image/foto3.jpeg" alt="Alumni 2" class="w-32 h-32 rounded-3xl object-cover mb-5 shadow-lg">
+                        <h3 class="text-xl font-semibold">Prof. Dr. Paul Tahelele</h3>
+                        <p class="text-fkki-mint text-sm mb-4">Pengurus Utama</p>
+                        <p class="text-sm text-white/80 mb-6">Beliau adalah tokoh sentral FKKI sejak awal berdirinya dan dikenal memiliki hati bagi pendidikan generasi muda dari Kawasan Indonesia Timur. Dengan pengalaman panjang di dunia akademik dan pelayanan, beliau menjadi pengurus utama yang mengawasi arah kebijakan, kemitraan pendidikan, dan keberlanjutan beasiswa. Beliau juga merupakan donatur utama yang terus memberikan dukungan finansial dan arahan strategis bagi perkembangan FKKI.</p>
+                    </article>
+                    <article class="bg-white/5 rounded-3xl p-8 backdrop-blur text-center flex flex-col items-center">
+                        <img src="/Users/lauramarcella2503/Documents/project_fkki/image/foto2.jpeg" alt="Alumni 3" class="w-32 h-32 rounded-3xl object-cover mb-5 shadow-lg">
+                        <h3 class="text-xl font-semibold">Bapak Yohanes</h3>
+                        <p class="text-fkki-mint text-sm mb-4">Pengurus dan Kepala Asrama</p>
+                        <p class="text-sm text-white/80 mb-6">Bapak Yohanes menjabat sebagai pengurus asrama yang mengawasi kehidupan sehari-hari siswa FKKI selama masa pembinaan tiga tahun. Beliau bertanggung jawab atas kedisiplinan, tata tertib, pembinaan karakter, serta memastikan lingkungan asrama aman dan mendukung perkembangan siswa. Dengan pengalaman dalam pembinaan generasi muda, beliau menjadi figur yang dekat dengan siswa dan berperan penting dalam membentuk kedewasaan dan tanggung jawab mereka.</p>
+                    </article>
+            </div>
+        </div>
+    </section>
+
+        <section id="kontak" class="py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <p class="text-sm uppercase tracking-[0.3em] text-fkki-sage mb-3">Kontak</p>
+                <h2 class="text-3xl font-serif text-gray-900 mb-4">Mari Bertemu dan Diskusikan Masa Depanmu</h2>
+                <p class="text-lg text-gray-600 mb-12">
+                    Tim kami siap membantu proses pendaftaran, menjawab pertanyaan teknis, hingga menghubungkanmu dengan mentor.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 text-left">
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+                        <p class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-3">Email</p>
+                        <a href="mailto:FKKI.connect@gmail.com" class="flex items-center gap-3 font-semibold text-fkki-sage hover:underline">
+                            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-fkki-sage">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="w-4 h-4 invert">
+                            </span>
+                            <span>FKKI.connect@gmail.com</span>
+                        </a>
+                        <p class="mt-2 text-sm text-gray-600">Respon maksimal 1x24 jam kerja.</p>
+                    </div>
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+                        <p class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-3">Instagram</p>
+                        <a href="https://www.instagram.com/fkkiconnect?igsh=ZnZwY2FmbnZoMXUx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 font-semibold text-fkki-sage hover:underline">
+                            <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-fkki-sage">
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-4 h-4 invert">
+                            </span>
+                            <span>@fkkiconnect</span>
+                        </a>
+                        <p class="mt-2 text-sm text-gray-600">Ikuti update program dan cerita penerima beasiswa.</p>
+                    </div>
+                    <div class="p-6 border border-fkki-mint rounded-2xl">
+    <p class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-3">WhatsApp</p>
+    <a href="https://wa.me/6289612483150"
+       target="_blank" rel="noopener noreferrer"
+       class="flex items-center gap-3 font-semibold text-fkki-sage hover:underline">
+        <span class="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#25D366]">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                 alt="WhatsApp" class="w-4 h-4 invert">
+        </span>
+        <span>089612483150</span>
+    </a>
+    <p class="mt-2 text-sm text-gray-600">Hubungi admin untuk info pendaftaran & seleksi.</p>
+</div>
+    </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row md:justify-between gap-6">
+            <div>
+                <p class="text-xs uppercase tracking-[0.4em] text-fkki-gold mb-2">Beasiswa FKKI</p>
+                <p class="text-lg font-semibold">Masa depan inklusif dimulai dari akses pendidikan berkualitas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.hero-slide');
+            if (!slides.length) return;
+
+            let slideIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, idx) => {
+                    slide.classList.toggle('active', idx === index);
+                });
+            }
+
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }, 2000);
+        })();
+    </script>
+</body>
+</html>
+
